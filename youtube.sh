@@ -1,5 +1,6 @@
 #!/bin/bash
 # Download a YouTube video (or audio only)
+# Usage: ./youtube.sh
 
 HELP="\nPrerequisites: Python 3.4+ (with pip)
         \nUsage:\n
