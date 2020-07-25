@@ -1,7 +1,5 @@
 # JSON Sorter
 
-Sorts a JSON file (including any nested objects).
-
 Sorts a JSON file (lexicographically) in-place (including any nested objects).
 
 ### Usage:
