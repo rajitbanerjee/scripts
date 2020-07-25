@@ -1,21 +1,35 @@
-from tkinter import Tk, filedialog
+#!/usr/bin/env python3
+import subprocess
+import sys
+
+"""
+Merges mutliple PDF files into a single file.
+
+### Usage
+
+1. Ensure that you have `pip` installed.
+2. Run the script with the files to be merged as arguments.
+```
+$ ./merge.py file1.pdf file2.pdf
+```
+3. The merged file is saved as `merged.pdf`.
+"""
+
+print("Installing requirements...")
+subprocess.check_call([sys.executable, "-m", "pip", "install", "-r", "requirements.txt"])
+
 from PyPDF2 import PdfFileWriter, PdfFileReader
 
-root = Tk()
-root.geometry('0x0+0+0')
-root.iconify()
-
 try:
-    # choose PDF files to be merged
-    selected_files = filedialog.askopenfilenames(
-        title="Select PDF file(s)", filetypes=[("PDF files", "*.pdf")])
+    # PDF files to be merged
+    selected_files = sys.argv[1:]
 
     if selected_files == "":
         print("\nError: No file selected!")
     elif len(selected_files) == 1:
         print("\nError: Only one file selected!")
     else:
-        print("Files to be merged:")
+        print("\nFiles to be merged:")
         for f in selected_files:
             print(f)
 
@@ -27,19 +41,8 @@ try:
                 writer.addPage(pdf.getPage(page))
 
         # save merged PDF
-        merged = filedialog.asksaveasfilename(
-            title="Save As", filetypes=[("PDF files", "*.pdf")])
-        if merged == "":
-            print("\nError: No file selected!")
-        else:
-            if not merged.endswith(".pdf"):
-                merged += ".pdf"
-
-            if merged in selected_files:
-                print("\nError: Merged file cannot be one of the originally selected files!")
-            else:
-                writer.write(open(merged, 'wb'))
-                print(f"\nPDF merge complete:\n{merged}")
+        writer.write(open("merged.pdf", 'wb'))
+        print(f"\nPDF merge complete! Saved as: merged.pdf")
 
 except Exception as e:
     print(f"\nError: File could not be processed!\n{filename}")
