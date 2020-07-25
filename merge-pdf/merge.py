@@ -16,7 +16,7 @@ $ ./merge.py file1.pdf file2.pdf
 """
 
 print("Installing requirements...")
-subprocess.check_call([sys.executable, "-m", "pip", "install", "-r", "requirements.txt"])
+subprocess.check_call([sys.executable, "-m", "pip", "install", "PyPDF2"])
 
 from PyPDF2 import PdfFileWriter, PdfFileReader
 
