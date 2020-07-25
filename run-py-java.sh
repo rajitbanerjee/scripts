@@ -5,14 +5,14 @@ Designed to be used in my leetcode repository (https://github.com/rajitbanerjee/
 
 Usage examples:
 For Python (defualt without -java flag),
-$ ./run.sh src/plusOne
+$ ./run-py-java.sh src/plusOne
 
 For Java, 
-$ ./run.sh src/plusOne -java 
+$ ./run-py-java.sh src/plusOne -java 
 DETAILS
 
 print_usage() {
-    echo "Usage: ./run.sh src/<dir_name> [-java]"
+    echo "Usage: ./run-py-java.sh src/<dir_name> [-java]"
     echo "Note: Python is used by default (without -java flag)"
     exit 1
 }
