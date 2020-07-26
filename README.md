@@ -42,4 +42,25 @@ Then, you can use the script like this:
 $ google "youtube the best of the beatles"
 ```
 
-Please refer to comments in the individual scripts for detailed usage information.
+Please refer to the individual scripts for detailed usage information
+
+<details>
+<summary>Summary</summary>
+
+| Script                  | Description                                                                    |
+| ----------------------- | ------------------------------------------------------------------------------ |
+| ./encrypt-pdf.py        | Encrypt a given PDF file with a password.                                      |
+| ./google.py             | Google search in the command line.                                             |
+| ./merge-json.py         | Merge all JSON files in the specified directory.                               |
+| ./merge-pdf.py          | Merge mutliple PDF files into a single file.                                   |
+| ./remove-pages.py       | Remove specified pages from a given PDF file.                                  |
+| ./sort-json.py          | Sorts a JSON file (lexicographically) in-place (including any nested objects). |
+| ./add-scripts-to-bin.sh | Copy all python/bash scripts from one directory to another.                    |
+| ./check-sudo-group.sh   | Lists all the sudoers (with root privileges) on the system.                    |
+| ./install-conda.sh      | Install miniconda3 in `/opt/conda/`.                                           |
+| ./path.sh               | Pretty print the `$PATH` variable.                                             |
+| ./rename-files.sh       | Rename files to replace spaces with underscores, and change to lower case.     |
+| ./run-py-java.sh        | Run all python/java files in a specified directory.                            |
+| ./youtube.sh            | Download a YouTube video (mp4) or audio file (mp3).                            |
+
+</details>
