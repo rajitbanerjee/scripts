@@ -10,7 +10,7 @@ HELP="\nPrerequisites: Python 3.4+ (with pip)
         \t$ ./youtube.sh <URL> -mp3\n
         3. Download 360p video file:\n
         \t$ ./youtube.sh <URL>\n
-        3. Download a specific stream (usually, it's itag=22 for 720p, itag=18 for 360p):\n
+        4. Download a specific stream (usually, it's itag=22 for 720p, itag=18 for 360p):\n
         \t$ ./youtube.sh <URL> -i 22\n
         \t$ ./youtube.sh <URL> -i 18\n"
 
