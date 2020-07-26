@@ -29,10 +29,9 @@ fi
 sudo mkdir -p $DEST
 
 for FILE in $1*; do
-    echo $FILE
     if [[ -f $FILE ]] && ([[ ${FILE: -3} == ".py" ]] || [[ ${FILE: -3} == ".sh" ]]) ; then
         NAME=$(basename $FILE)
         sudo cp $FILE "$DEST/${NAME%.*}"
-        chmod +x $DEST/*
+        sudo chmod +x $DEST/*
     fi
 done
