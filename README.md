@@ -30,8 +30,7 @@ $ ./script_name.sh
 $ ./script_name.py
 ```
 
-Tip: Copy scripts (without .py/.sh extension) to a directory in your
-\$PATH (e.g. /usr/local/bin) to access them from anywhere!
+Tip: Copy scripts (without `.py`/`.sh` extension) to a directory in your `$PATH` (e.g. `/usr/local/bin`) to access them from anywhere!
 
 ```
 $ sudo cp ./google.py /usr/local/bin/google
