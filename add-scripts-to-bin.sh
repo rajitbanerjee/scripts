@@ -9,29 +9,35 @@ This allows to scripts to be executed from any working directory!
 Usage:
     $ ./add-scripts-to-bin.sh <dir> <destination>
 
-Default <dir> is `./`
-Default <destination> is `/usr/local/bin/custom_scripts`.
+Default <dir> is ./
+Default <destination> is /usr/local/bin/custom_scripts (may need sudo 
+priveleges for this, else change destination if not available).
 
 E.g.
-    $ ./add-scripts-to-bin.sh
+    $ sudo ./add-scripts-to-bin.sh
 DETAILS
 
 SRC="./"
-if [[ $1 != "" ]]; then
-    let SRC=$1
+if [[ "$1" != "" ]]; then
+    let SRC="$1"
 fi
 
 DEST="/usr/local/bin/custom_scripts"
-if [[ $2 != "" ]]; then
-    let DEST=$2
+if [[ "$2" != "" ]]; then
+    let DEST="$2"
 fi
 
-sudo mkdir -p $DEST
+mkdir -p "$DEST"
 
-for FILE in $1*; do
-    if [[ -f $FILE ]] && ([[ ${FILE: -3} == ".py" ]] || [[ ${FILE: -3} == ".sh" ]]) ; then
-        NAME=$(basename $FILE)
-        sudo cp $FILE "$DEST/${NAME%.*}"
-        sudo chmod +x $DEST/*
+for FILE in "$SRC"*; do
+    if [[ -f "$FILE" ]]; then
+        if [[ ${FILE: -3} == ".py" ]] || [[ ${FILE: -3} == ".sh" ]]; then
+            NAME=$(basename $FILE)
+            cp "$FILE" "$DEST/${NAME%.*}"
+            chmod +x "$DEST"/*
+        fi
     fi
 done
+
+echo "$DEST:"
+ls -la $DEST
