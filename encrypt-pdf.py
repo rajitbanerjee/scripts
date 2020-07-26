@@ -3,7 +3,9 @@ from getpass import getpass
 import subprocess
 import sys
 
-"""
+
+def print_help():
+    print("""
 Encrypt a given PDF file with a password.
 
 ### Usage
@@ -15,7 +17,8 @@ $ ./encrypt-pdf.py <name>.pdf
 ```
 3. Enter password.
 3. The encrypted file is saved as `<name>_encrypted.pdf`.
-"""
+    """)
+
 
 print("Installing requirements...")
 subprocess.check_call([sys.executable, "-m", "pip", "install", "PyPDF2"])
@@ -24,7 +27,7 @@ from PyPDF2 import PdfFileReader, PdfFileWriter
 
 try:
     if len(sys.argv) < 2:
-        print("\nError: No file selected!")
+        print_help()
     else:
         # PDF file to be encrypted
         input_file = sys.argv[1]

@@ -2,7 +2,9 @@
 import subprocess
 import sys
 
-"""
+
+def print_help():
+    print("""
 Removes specified pages from a given PDF file.
 
 ### Usage
@@ -14,7 +16,8 @@ to be removed (comma separated, no spaces).
 $ ./remove-pages.py doc.pdf 1,2,3
 ```
 3. The modified file is saved as `new_doc.pdf`.
-"""
+    """)
+
 
 print("Installing requirements...")
 subprocess.check_call([sys.executable, "-m", "pip", "install", "PyPDF2"])
@@ -41,7 +44,7 @@ try:
         writer.write(open("new_doc.pdf", 'wb'))
         print(f"\nPage removal complete! Saved as: new_doc.pdf")
     else:
-        raise Exception("Error: No pages specified!")
+        print_help()
 
 except Exception as e:
     print(f"\nError: File could not be processed!")

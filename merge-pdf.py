@@ -2,7 +2,9 @@
 import subprocess
 import sys
 
-"""
+
+def print_help():
+    print("""
 Merges mutliple PDF files into a single file.
 
 ### Usage
@@ -13,7 +15,8 @@ Merges mutliple PDF files into a single file.
 $ ./merge-pdf.py file1.pdf file2.pdf
 ```
 3. The merged file is saved as `merged.pdf`.
-"""
+    """)
+
 
 print("Installing requirements...")
 subprocess.check_call([sys.executable, "-m", "pip", "install", "PyPDF2"])
@@ -21,25 +24,28 @@ subprocess.check_call([sys.executable, "-m", "pip", "install", "PyPDF2"])
 from PyPDF2 import PdfFileMerger
 
 try:
-    # PDF files to be merged
-    selected_files = sys.argv[1:]
-
-    if selected_files == "":
-        print("\nError: No file selected!")
-    elif len(selected_files) == 1:
-        print("\nError: Only one file selected!")
+    if len(sys.argv) < 2:
+        print_help()
     else:
-        print("\nFiles to be merged:")
-        for f in selected_files:
-            print(f)
+        # PDF files to be merged
+        selected_files = sys.argv[1:]
 
-        merger = PdfFileMerger()
-        for filename in selected_files:
-            merger.append(filename)
+        if selected_files == "":
+            print("\nError: No file selected!")
+        elif len(selected_files) == 1:
+            print("\nError: Only one file selected!")
+        else:
+            print("\nFiles to be merged:")
+            for f in selected_files:
+                print(f)
 
-        # save merged PDF
-        merger.write(open("merged.pdf", 'wb'))
-        print(f"\nPDF merge complete! Saved as: merged.pdf\n")
+            merger = PdfFileMerger()
+            for filename in selected_files:
+                merger.append(filename)
+
+            # save merged PDF
+            merger.write(open("merged.pdf", 'wb'))
+            print(f"\nPDF merge complete! Saved as: merged.pdf\n")
 
 except Exception as e:
     print(f"\nError: File could not be processed!\n{filename}")

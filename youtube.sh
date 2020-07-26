@@ -2,17 +2,21 @@
 # Download a YouTube video (or audio only)
 # Usage: ./youtube.sh
 
-HELP="\nPrerequisites: Python 3.4+ (with pip)
-        \nUsage:\n
-        1. List all available streams:\n
-        \t$ ./youtube.sh <URL> -l\n
-        2. Download mp3 audio file only:\n
-        \t$ ./youtube.sh <URL> -mp3\n
-        3. Download 360p video file:\n
-        \t$ ./youtube.sh <URL>\n
-        4. Download a specific stream (usually, it's itag=22 for 720p, itag=18 for 360p):\n
-        \t$ ./youtube.sh <URL> -i 22\n
-        \t$ ./youtube.sh <URL> -i 18\n"
+print_help() {
+    echo "
+Prerequisites: Python 3.4+ (with pip)
+Usage:
+1. List all available streams:
+    $ ./youtube.sh <URL> -l
+2. Download mp3 audio file only:
+    $ ./youtube.sh <URL> -mp3
+3. Download 360p video file:
+    $ ./youtube.sh <URL>
+4. Download a specific stream (usually, it's itag=22 for 720p, itag=18 for 360p):
+    $ ./youtube.sh <URL> -i 22
+    $ ./youtube.sh <URL> -i 18
+"
+}
 
 # Change Internal Field Separator to simplify file renaming process (for file names containing spaces)    
 IFS='
@@ -40,13 +44,13 @@ case $1 in
                 pytubeX $1 --itag=18
                 ;;
             *)
-                echo -e $HELP
+                print_help
                 ;;
         esac
 
         ;;
 
     *)
-        echo -e $HELP
+        print_help
         ;;
 esac
