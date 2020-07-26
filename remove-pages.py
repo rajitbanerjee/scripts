@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-from PyPDF2 import PdfFileWriter, PdfFileReader
 import subprocess
 import sys
 
@@ -19,6 +18,8 @@ $ ./remove-pages.py doc.pdf 1,2,3
 
 print("Installing requirements...")
 subprocess.check_call([sys.executable, "-m", "pip", "install", "PyPDF2"])
+
+from PyPDF2 import PdfFileWriter, PdfFileReader
 
 try:
     if len(sys.argv) > 2:
