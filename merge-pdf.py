@@ -18,7 +18,7 @@ $ ./merge-pdf.py file1.pdf file2.pdf
 print("Installing requirements...")
 subprocess.check_call([sys.executable, "-m", "pip", "install", "PyPDF2"])
 
-from PyPDF2 import PdfFileWriter, PdfFileReader
+from PyPDF2 import PdfFileMerger
 
 try:
     # PDF files to be merged
@@ -33,16 +33,13 @@ try:
         for f in selected_files:
             print(f)
 
-        writer = PdfFileWriter()
-        # add every page of every PDF to the PDF file writer
+        merger = PdfFileMerger()
         for filename in selected_files:
-            pdf = PdfFileReader(open(filename, 'rb'))
-            for page in range(pdf.getNumPages()):
-                writer.addPage(pdf.getPage(page))
+            merger.append(filename)
 
         # save merged PDF
-        writer.write(open("merged.pdf", 'wb'))
-        print(f"\nPDF merge complete! Saved as: merged.pdf")
+        merger.write(open("merged.pdf", 'wb'))
+        print(f"\nPDF merge complete! Saved as: merged.pdf\n")
 
 except Exception as e:
     print(f"\nError: File could not be processed!\n{filename}")
