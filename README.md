@@ -1,6 +1,7 @@
 # Scripts
 
-A collection of my bash and python scripts. Work in progress; I'm planning to add more scripts as I think of tasks to simplify!
+A collection of my bash and python scripts.  
+Work in progress; I'm planning to add more scripts as I think of tasks to simplify!
 
 ## Getting Started
 
