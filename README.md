@@ -49,6 +49,7 @@ Please refer to the individual scripts for detailed usage information
 
 | Script                  | Description                                                                    |
 | ----------------------- | ------------------------------------------------------------------------------ |
+| ./hackerrank/           | Solutions to selected Linux Shell questions from HackerRank.                   |
 | ./encrypt-pdf.py        | Encrypt a given PDF file with a password.                                      |
 | ./google.py             | Google search in the command line.                                             |
 | ./merge-json.py         | Merge all JSON files in the specified directory.                               |
