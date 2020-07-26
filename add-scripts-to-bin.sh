@@ -11,7 +11,7 @@ Usage:
 
 Default <dir> is ./
 Default <destination> is /usr/local/bin/custom_scripts (may need sudo 
-priveleges for this, else change destination if not available).
+priveleges for this; change destination if not available).
 
 E.g.
     $ sudo ./add-scripts-to-bin.sh
