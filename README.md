@@ -19,21 +19,19 @@ For the Python scripts, I recommend installing Python 3.6+ (comes with `pip` too
 If you try using any of these, remember to give execute permissions to the script.
 
 ```
-$ chmod +x script_name.sh
-$ chmod +x script_name.py
+$ chmod +x script_name
 ```
 
 This will allow you to run the scripts like:
 
 ```
-$ ./script_name.sh
-$ ./script_name.py
+$ ./script_name
 ```
 
-Tip: Copy scripts (without `.py`/`.sh` extension) to a directory in your `$PATH` (e.g. `/usr/local/bin`) to access them from anywhere!
+Tip: Copy scripts to a directory in your `$PATH` (e.g. `/usr/local/bin`) to access them from anywhere!
 
 ```
-$ sudo cp ./google.py /usr/local/bin/google
+$ sudo cp ./google /usr/local/bin/google
 ```
 
 Then, you can use the script like this:
@@ -47,22 +45,22 @@ Please refer to the individual scripts for detailed usage information.
 <details>
 <summary>Summary</summary>
 
-| Script                  | Description                                                                   |
-| ----------------------- | ----------------------------------------------------------------------------- |
-| ./hackerrank/           | Solutions to selected Linux Shell questions from HackerRank.                  |
-| ./encrypt-pdf.py        | Encrypt a given PDF file with a password.                                     |
-| ./google.py             | Google search in the command line.                                            |
-| ./merge-json.py         | Merge all JSON files in the specified directory.                              |
-| ./merge-pdf.py          | Merge mutliple PDF files into a single file.                                  |
-| ./remove-pages.py       | Remove specified pages from a given PDF file.                                 |
-| ./sort-json.py          | Sort a JSON file (lexicographically) in-place (including any nested objects). |
-| ./add-scripts-to-bin.sh | Copy all python/bash scripts from one directory to another.                   |
-| ./check-sudo-group.sh   | List all the sudoers (with root privileges) on the system.                    |
-| ./install-conda.sh      | Install miniconda3 in `/opt/conda/`.                                          |
-| ./mkfile.sh             | Create a new file in a new directory at the same time.                        |
-| ./path.sh               | Pretty print the `$PATH` variable.                                            |
-| ./rename-files.sh       | Rename files to replace spaces with underscores, and change to lower case.    |
-| ./run-py-java.sh        | Run all python/java files in a specified directory.                           |
-| ./youtube.sh            | Download a YouTube video (mp4) or audio file (mp3).                           |
+| Script              | Description                                                                   |
+| ------------------- | ----------------------------------------------------------------------------- |
+| ./hackerrank/       | Solutions to selected Linux Shell questions from HackerRank.                  |
+| ./check-sudo-group  | List all the sudoers (with root privileges) on the system.                    |
+| ./encrypt-pdf       | Encrypt a given PDF file with a password.                                     |
+| ./google            | Google search in the command line.                                            |
+| ./install-conda     | Install miniconda3 in `/opt/conda/`.                                          |
+| ./merge-json        | Merge all JSON files in the specified directory.                              |
+| ./merge-pdf         | Merge mutliple PDF files into a single file.                                  |
+| ./mkfile            | Create a new file in a new directory at the same time.                        |
+| ./path              | Pretty print the `$PATH` variable.                                            |
+| ./remove-extensions | Remove file extensions from all files in the specified directory.             |
+| ./remove-pages      | Remove specified pages from a given PDF file.                                 |
+| ./rename-files      | Rename files to replace spaces with underscores, and change to lower case.    |
+| ./run-py-java       | Run all python/java files in a specified directory.                           |
+| ./sort-json         | Sort a JSON file (lexicographically) in-place (including any nested objects). |
+| ./youtube           | Download a YouTube video (mp4) or audio file (mp3).                           |
 
 </details>
