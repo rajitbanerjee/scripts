@@ -10,7 +10,7 @@ Quick Google search from the command line.
 ### Usage
 
 ```
-$ ./google.py "youtube the lumineers"
+$ ./google "youtube the lumineers"
 ```
 
 Note: The script also works for most terms without being wrapped in quotes.
