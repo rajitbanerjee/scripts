@@ -28,13 +28,13 @@ This will allow you to run the scripts like:
 $ ./script_name
 ```
 
-Tip: Copy scripts to a directory in your `$PATH` (e.g. `/usr/local/bin`) to access them from anywhere!
+Tip: Copy scripts to a directory in your `$PATH` (e.g. `~/bin`, assuming you've added it to your path) to access them from anywhere!
 
 ```
-$ sudo cp ./google /usr/local/bin/google
+$ sudo cp ./google ~/bin/google
 ```
 
-Then, you can use the script like this:
+Then, you can use the script like this from any working directory:
 
 ```
 $ google "youtube the best of the beatles"
