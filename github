@@ -1,0 +1,9 @@
+#!/bin/bash
+<<DETAILS
+Open GitHub for current git repository. 
+Usage:
+    $ ./github
+(Run at the root of the git repository.)
+DETAILS
+
+xdg-open "https://github.com/$(git config remote.origin.url | cut -f2 -d:)"
