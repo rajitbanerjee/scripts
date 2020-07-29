@@ -2,7 +2,7 @@
 import json
 import sys
 import os
-
+from collections import OrderedDict
 
 def print_help():
     print("""
@@ -32,7 +32,7 @@ try:
         if not input_dir:
             print("No directory specified!")
         else:
-            combined_data = {}
+            combined_data = OrderedDict()
             count = 1
             print("\nFiles to be merged:")
             for filename in sorted(os.listdir(input_dir)):
