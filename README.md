@@ -62,6 +62,7 @@ Please refer to the individual scripts for detailed usage information.
 | ./rename-files      | Rename files to replace spaces with underscores, and change to lower case.    |
 | ./run-py-java       | Run all python/java files in a specified directory.                           |
 | ./sort-json         | Sort a JSON file (lexicographically) in-place (including any nested objects). |
+| ./update-submodule  | Update changes in a given submodule.                                          |
 | ./youtube           | Download a YouTube video (mp4) or audio file (mp3).                           |
 
 </details>
