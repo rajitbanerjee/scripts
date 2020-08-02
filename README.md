@@ -28,7 +28,7 @@ This will allow you to run the scripts like:
 $ ./script_name
 ```
 
-Tip: Copy scripts to a directory in your `$PATH` (e.g. `~/bin`, assuming you've added it to your path) to access them from anywhere!
+Tip: Copy scripts to a directory in your `$PATH` (e.g. `~/.local/bin`, which is added to path using `source ~/.profile`) to access them from anywhere!
 
 ```
 $ sudo cp ./google ~/bin/google
