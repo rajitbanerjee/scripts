@@ -61,6 +61,7 @@ Please refer to the individual scripts for detailed usage information.
 | ./remove-pages      | Remove specified pages from a given PDF file.                                 |
 | ./rename-files      | Rename files to replace spaces with underscores, and change to lower case.    |
 | ./run-py-java       | Run all python/java files in a specified directory.                           |
+| ./setup-vundle      | Install Vundle and other vim plugins (or update them).                        |
 | ./sort-json         | Sort a JSON file (lexicographically) in-place (including any nested objects). |
 | ./update-submodule  | Update changes in a given submodule.                                          |
 | ./youtube           | Download a YouTube video (mp4) or audio file (mp3).                           |
