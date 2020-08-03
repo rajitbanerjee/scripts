@@ -52,7 +52,6 @@ Please refer to the individual scripts for detailed usage information.
 | ./encrypt-pdf       | Encrypt a given PDF file with a password.                                     |
 | ./github            | Open GitHub for repository in current working directory.                      |
 | ./google            | Google search in the command line.                                            |
-| ./install-conda     | Install miniconda3 in `/opt/conda/`.                                          |
 | ./merge-json        | Merge all JSON files in the specified directory.                              |
 | ./merge-pdf         | Merge mutliple PDF files into a single file.                                  |
 | ./mkfile            | Create a new file in a new directory at the same time.                        |
@@ -63,6 +62,7 @@ Please refer to the individual scripts for detailed usage information.
 | ./run-py-java       | Run all python/java files in a specified directory.                           |
 | ./setup-vundle      | Install Vundle and other vim plugins (or update them).                        |
 | ./sort-json         | Sort a JSON file (lexicographically) in-place (including any nested objects). |
+| ./system-setup      | Install system dependencies (+ vim plugins dependencies) on a fresh system.   |
 | ./update-submodule  | Update changes in a given submodule.                                          |
 | ./youtube           | Download a YouTube video (mp4) or audio file (mp3).                           |
 

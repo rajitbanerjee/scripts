@@ -1,0 +1,46 @@
+#!/bin/bash
+sudo add-apt-repository ppa:jonathonf/vim
+sudo apt update
+sudo apt-get update
+
+# Update vim version
+sudo apt install vim
+
+# Intall bash-wakatime (only after conda has been set up and base is active)
+pip install wakatime
+git clone https://github.com/gjsheep/bash-wakatime.git ~/.local/share/bash-wakatime
+
+# Install npm
+sudo apt install npm
+
+# trash-cli (alternative to rm -rf)
+sudo apt install trash-cli
+
+# Silver Searcher
+sudo apt-get install silversearcher-ag
+
+# fzf (fuzzy file search)
+sudo apt install fzf
+
+# tdlr; (man, but with examples)
+sudo apt install tldr && tldr
+
+# zip (in case tar.gz won't do)
+sudo apt install zip
+
+# bat (a cat clone, with syntax highlighting)
+wget https://github.com/sharkdp/bat/releases/download/v0.15.4/bat_0.15.4_amd64.deb
+sudo dpkg -i bat_0.15.4_amd64.deb
+rm -rf bat_0.15.4_amd64.deb
+
+# Vim plugins install dependencies
+# 1. YouCompleteMe
+if [ -f ~/.vim/bundle/YouCompleteMe/install.py ]; then
+    sudo apt install build-essential cmake
+    python3 ~/.vim/bundle/YouCompleteMe/install.py --all
+fi
+# 2. vim-prettier
+if [ -f ~/.vim/bundle/vim-prettier/package.json ]; then
+    npm --prefix ~/.vim/bundle/vim-prettier install ~/.vim/bundle/vim-prettier
+fi
+
