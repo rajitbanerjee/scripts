@@ -52,6 +52,7 @@ Please refer to the individual scripts for detailed usage information.
 | ./encrypt-pdf       | Encrypt a given PDF file with a password.                                     |
 | ./github            | Open GitHub for repository in current working directory.                      |
 | ./google            | Google search in the command line.                                            |
+| ./install-conda     | `source ./install-conda` installs Miniconda3.                                 |
 | ./merge-json        | Merge all JSON files in the specified directory.                              |
 | ./merge-pdf         | Merge mutliple PDF files into a single file.                                  |
 | ./mkfile            | Create a new file in a new directory at the same time.                        |
