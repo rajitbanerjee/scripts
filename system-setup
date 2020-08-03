@@ -1,4 +1,10 @@
 #!/bin/bash
+<<DETAILS
+Set up a new system with my preferred packages.
+Usage: ./system-setup
+DETAILS
+
+echo -e "Starting system setup...\n"
 sudo add-apt-repository ppa:jonathonf/vim
 sudo apt update
 sudo apt-get update
@@ -44,3 +50,4 @@ if [ -f ~/.vim/bundle/vim-prettier/package.json ]; then
     npm --prefix ~/.vim/bundle/vim-prettier install ~/.vim/bundle/vim-prettier
 fi
 
+echo -e "\nSystem setup complete!\n"
