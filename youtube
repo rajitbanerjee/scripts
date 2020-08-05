@@ -28,20 +28,20 @@ case $1 in
         pip install pytubeX
         case $2 in
             "-mp3")
-                pytubeX $1 -a
+                pytube4 $1 -a
                 # Save file in mp3 format
                 NAME="$(ls -Art | tail -n 1)" 
                 mv $NAME "${NAME%.*}.mp3"
                 echo "Audio file saved as: ${NAME%.*}.mp3"
                 ;;
             "-l")
-                pytubeX $1 -l
+                pytube4 $1 -l
                 ;;
             "-i")
-                pytubeX $1 --itag=$3  
+                pytube4 $1 --itag=$3  
                 ;; 
             "")
-                pytubeX $1 --itag=18
+                pytube4 $1 --itag=18
                 ;;
             *)
                 print_help
