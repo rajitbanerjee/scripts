@@ -50,4 +50,8 @@ if [ -f ~/.vim/bundle/vim-prettier/package.json ]; then
     npm --prefix ~/.vim/bundle/vim-prettier install ~/.vim/bundle/vim-prettier
 fi
 
+# Heroku CLI and PostgreSQL
+curl https://cli-assets.heroku.com/install.sh | sh
+sudo apt-get install postgresql
+
 echo -e "\nSystem setup complete!\n"
