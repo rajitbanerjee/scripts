@@ -4,4 +4,4 @@
 # Usage: ./path
 
 source ~/.bashrc
-tr ':' '\n' <<< \"$PATH\"
+tr ':' '\n' <<< \"$PATH\" | less
