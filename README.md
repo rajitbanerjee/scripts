@@ -31,7 +31,7 @@ $ ./script_name
 Tip: Copy scripts to a directory in your `$PATH` (e.g. `~/.local/bin`, which is added to path using `source ~/.profile`) to access them from anywhere!
 
 ```
-$ sudo cp ./google ~/bin/google
+$ cp ./google ~/.local/bin/
 ```
 
 Then, you can use the script like this from any working directory:
