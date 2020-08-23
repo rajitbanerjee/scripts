@@ -45,10 +45,12 @@ if [ -f ~/.vim/bundle/YouCompleteMe/install.py ]; then
     sudo apt install build-essential cmake
     python3 ~/.vim/bundle/YouCompleteMe/install.py --all
 fi
-# 2. vim-prettier
-if [ -f ~/.vim/bundle/vim-prettier/package.json ]; then
-    npm --prefix ~/.vim/bundle/vim-prettier install ~/.vim/bundle/vim-prettier
-fi
+# 2. vim-autoformat (default formatprograms) 
+sudo apt-get install python-autopep8 # Python
+sudo npm install -g remark-cli # Markdown
+sudo npm install -g fixjson # JSON
+sudo npm install -g js-beautify # HTML, CSS, JS 
+
 
 # Heroku CLI and PostgreSQL
 curl https://cli-assets.heroku.com/install.sh | sh
