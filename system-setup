@@ -16,9 +16,6 @@ sudo apt install vim
 pip install wakatime
 git clone https://github.com/gjsheep/bash-wakatime.git ~/.local/share/bash-wakatime
 
-# Install npm
-sudo apt install npm
-
 # trash-cli (alternative to rm -rf)
 sudo apt install trash-cli
 
