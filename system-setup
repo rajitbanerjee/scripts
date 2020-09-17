@@ -12,8 +12,11 @@ sudo apt-get update
 # Update vim version
 sudo apt install vim
 
-# Intall bash-wakatime (only after conda has been set up and base is active)
-pip install wakatime
+# Install pip3 for default python3 on Linux
+sudo apt install python3-pip
+
+# Intall bash-wakatime
+pip3 install wakatime
 git clone https://github.com/gjsheep/bash-wakatime.git ~/.local/share/bash-wakatime
 
 # trash-cli (safer alternative to rm -rf)
