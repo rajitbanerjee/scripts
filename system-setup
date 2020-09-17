@@ -16,14 +16,15 @@ sudo apt install vim
 pip install wakatime
 git clone https://github.com/gjsheep/bash-wakatime.git ~/.local/share/bash-wakatime
 
-# trash-cli (alternative to rm -rf)
+# trash-cli (safer alternative to rm -rf)
 sudo apt install trash-cli
 
 # Silver Searcher
 sudo apt-get install silversearcher-ag
 
 # fzf (fuzzy file search)
-sudo apt install fzf
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
 
 # tdlr; (man, but with examples)
 sudo apt install tldr && tldr
