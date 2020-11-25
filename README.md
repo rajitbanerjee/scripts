@@ -18,27 +18,19 @@ For the Python scripts, I recommend installing Python 3.6+ (comes with `pip` too
 
 If you try using any of these, remember to give execute permissions to the script.
 
-```
-$ chmod +x script_name
-```
+    $ chmod +x script_name
 
 This will allow you to run the scripts like:
 
-```
-$ ./script_name
-```
+    $ ./script_name
 
 Tip: Copy scripts to a directory in your `$PATH` (e.g. `~/.local/bin`, which is added to path using `source ~/.profile`) to access them from anywhere!
 
-```
-$ cp ./google ~/.local/bin/
-```
+    $ cp ./google ~/.local/bin/
 
 Then, you can use the script like this from any working directory:
 
-```
-$ google "youtube the best of the beatles"
-```
+    $ google "youtube the best of the beatles"
 
 Please refer to the individual scripts for detailed usage information.
 
@@ -56,6 +48,7 @@ Please refer to the individual scripts for detailed usage information.
 | ./merge-json        | Merge all JSON files in the specified directory.                              |
 | ./merge-pdf         | Merge mutliple PDF files into a single file.                                  |
 | ./mkfile            | Create a new file in a new directory at the same time.                        |
+| ./mkpdf             | Format LATEX file, convert to PDF and trash log/aux files.                    |
 | ./path              | Pretty print the `$PATH` variable.                                            |
 | ./remove-extensions | Remove file extensions from all files in the specified directory.             |
 | ./remove-pages      | Remove specified pages from a given PDF file.                                 |
