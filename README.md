@@ -45,10 +45,10 @@ Please refer to the individual scripts for detailed usage information.
 | ./github            | Open GitHub for repository in current working directory.                      |
 | ./google            | Google search in the command line.                                            |
 | ./install-conda     | `source ./install-conda` installs Miniconda3.                                 |
+| ./lx                | Format LaTeX file, convert to PDF and trash log/aux files.                    |
 | ./merge-json        | Merge all JSON files in the specified directory.                              |
 | ./merge-pdf         | Merge mutliple PDF files into a single file.                                  |
 | ./mkfile            | Create a new file in a new directory at the same time.                        |
-| ./mkpdf             | Format LATEX file, convert to PDF and trash log/aux files.                    |
 | ./path              | Pretty print the `$PATH` variable.                                            |
 | ./remove-extensions | Remove file extensions from all files in the specified directory.             |
 | ./remove-pages      | Remove specified pages from a given PDF file.                                 |

@@ -1,5 +1,5 @@
 #!/bin/bash
-# Format LATEX file, then convert it to PDF, and delete other generated files.
+# Format LaTeX file, then convert it to PDF, and clean up auxiliary files.
 
 # format
 ~/.local/bin/latexindent/latexindent.pl $1 > ./.tmp.tex
@@ -8,5 +8,5 @@ mv ./.tmp.tex $1
 rm -rf ./.tmp.tex indent.log
 
 # convert to PDF
-pdflatex $1 && trash ${1%.*}.{aux,log} texput.log
+pdflatex $1 && trash ${1%.*}.{aux,log}
 
