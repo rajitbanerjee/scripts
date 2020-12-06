@@ -25,10 +25,6 @@ sudo apt install trash-cli
 # Silver Searcher
 sudo apt-get install silversearcher-ag
 
-# fzf (fuzzy file search)
-git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-~/.fzf/install
-
 # tdlr; (man, but with examples)
 sudo apt install tldr && tldr
 
@@ -51,11 +47,6 @@ sudo apt-get install python-autopep8 # Python
 sudo npm install -g remark-cli # Markdown
 sudo npm install -g fixjson # JSON
 sudo npm install -g js-beautify # HTML, CSS, JS 
-
-
-# Heroku CLI and PostgreSQL
-curl https://cli-assets.heroku.com/install.sh | sh
-sudo apt-get install postgresql
 
 # Java (default v11)
 sudo apt install default-jdk
