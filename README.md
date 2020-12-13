@@ -44,6 +44,7 @@ Please refer to the individual scripts for detailed usage information.
 | ./encrypt-pdf       | Encrypt a given PDF file with a password.                                     |
 | ./github            | Open GitHub for repository in current working directory.                      |
 | ./google            | Google search in the command line.                                            |
+| ./hamming           | 11-bit Hamming Code problem solver.                                           |
 | ./install-conda     | `source ./install-conda` installs Miniconda3.                                 |
 | ./lx                | Format LaTeX file, convert to PDF and trash log/aux files.                    |
 | ./merge-json        | Merge all JSON files in the specified directory.                              |
