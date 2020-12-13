@@ -41,6 +41,7 @@ Please refer to the individual scripts for detailed usage information.
 | ------------------- | ----------------------------------------------------------------------------- |
 | ./hackerrank/       | Solutions to selected Linux Shell questions from HackerRank.                  |
 | ./check-sudo-group  | List all the sudoers (with root privileges) on the system.                    |
+| ./crc               | Cyclic Redundancy Check problem solver.                                       |
 | ./encrypt-pdf       | Encrypt a given PDF file with a password.                                     |
 | ./github            | Open GitHub for repository in current working directory.                      |
 | ./google            | Google search in the command line.                                            |
