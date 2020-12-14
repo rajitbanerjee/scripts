@@ -53,13 +53,7 @@ def hasError(message, generator):
     r = divMod2(msg, generator)
     remainder = bin(r).lstrip("-0b").zfill(l_gen-1)
     print("Remainder:\t\t", remainder if remainder else None)
-    error = r != 0
-    if error:
-        data = message[:1-l_gen]
-        print("---Correction---")
-        getCRC(data, generator)
-        print("----------------")
-    return error
+    return r != 0
 
 
 if __name__ == '__main__':
