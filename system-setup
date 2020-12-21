@@ -36,13 +36,13 @@ wget https://github.com/sharkdp/bat/releases/download/v0.15.4/bat_0.15.4_amd64.d
 sudo dpkg -i bat_0.15.4_amd64.deb
 rm -rf bat_0.15.4_amd64.deb
 
-# Vim plugins install dependencies
-# 1. YouCompleteMe
+# Vim plugins: install dependencies
+## 1. YouCompleteMe
 if [ -f ~/.vim/bundle/YouCompleteMe/install.py ]; then
     sudo apt install build-essential cmake
     python3 ~/.vim/bundle/YouCompleteMe/install.py --all
 fi
-# 2. vim-autoformat (default formatprograms) 
+## 2. vim-autoformat (default format programs) 
 sudo apt-get install python-autopep8 # Python
 sudo npm install -g remark-cli # Markdown
 sudo npm install -g fixjson # JSON
