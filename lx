@@ -8,5 +8,8 @@ mv ./.tmp.tex $1
 rm -rf ./.tmp.tex indent.log
 
 # convert to PDF
-pdflatex $1 && trash ${1%.*}.{aux,log}
+pdflatex $1
+
+# clean up auxiliary files
+trash ${1%.*}.{aux,fdb_latexmk,fls,log,out,synctex.gz}
 
