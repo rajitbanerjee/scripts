@@ -20,13 +20,13 @@ If you try using any of these, remember to give execute permissions to the scrip
 
     $ chmod +x script_name
 
-This will allow you to run the scripts like:
+This will allow you to run the scripts as shown:
 
     $ ./script_name
 
-Tip: Copy scripts to a directory in your `$PATH` (e.g. `~/.local/bin`, which is added to path using `source ~/.profile`) to access them from anywhere!
+Tip: Add the `scripts` directory to your `$PATH` by including the line below in `~/.bashrc` to access them from anywhere!
 
-    $ cp ./google ~/.local/bin/
+    $ export PATH="/path/to/scripts:$PATH"
 
 Then, you can use the script like this from any working directory:
 
@@ -47,7 +47,7 @@ Please refer to the individual scripts for detailed usage information.
 | ./google            | Google search in the command line.                                            |
 | ./hamming           | 11-bit Hamming Code problem solver.                                           |
 | ./install-conda     | `source ./install-conda` installs Miniconda3.                                 |
-| ./lx                | Format LaTeX file, convert to PDF and trash log/aux files.                    |
+| ./lx                | Format LaTeX file, convert to PDF and trash auxiliary files.                  |
 | ./merge-json        | Merge all JSON files in the specified directory.                              |
 | ./merge-pdf         | Merge mutliple PDF files into a single file.                                  |
 | ./mkfile            | Create a new file in a new directory at the same time.                        |
@@ -58,7 +58,7 @@ Please refer to the individual scripts for detailed usage information.
 | ./run-py-java       | Run all python/java files in a specified directory.                           |
 | ./setup-vundle      | Install Vundle and other vim plugins (or update them).                        |
 | ./sort-json         | Sort a JSON file (lexicographically) in-place (including any nested objects). |
-| ./system-setup      | Install system dependencies (+ vim plugins dependencies) on a fresh system.   |
+| ./system-setup      | Install system dependencies (+ vim plugins' dependencies) on a fresh system.  |
 | ./update-submodule  | Update changes in a given submodule.                                          |
 | ./youtube           | Download a YouTube video (mp4) or audio file (mp3).                           |
 
