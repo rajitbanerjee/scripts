@@ -51,7 +51,8 @@ sudo npm install -g js-beautify # HTML, CSS, JS
 # Java (default v11)
 sudo apt install default-jdk
 
-# LaTeX linter/semantic checker (used by Ale for vim)
-sudo apt install chktex
+# LaTeX (uncomment if necessary)
+# sudo apt-get install texlive texlive-pictures texlive-latex-extra texlive-xetex
+# sudo apt install chktex # linter used by ale for vim
 
 echo -e "\nSystem setup complete!\n"
