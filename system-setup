@@ -28,6 +28,10 @@ sudo apt-get install silversearcher-ag
 # tdlr; (man, but with examples)
 sudo apt install tldr && tldr
 
+# https://github.com/chubin/cheat.sh
+curl https://cht.sh/:cht.sh > ~/.local/bin/cht.sh
+chmod +x ~/.local/bin/cht.sh
+
 # zip (in case tar.gz won't do)
 sudo apt install zip
 
