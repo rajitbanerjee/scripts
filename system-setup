@@ -52,6 +52,9 @@ sudo npm install -g remark-cli # Markdown
 sudo npm install -g fixjson # JSON
 sudo npm install -g js-beautify # HTML, CSS, JS 
 
+# shellcheck, linter used by ale (vim) for bash/sh
+sudo apt install shellcheck
+
 # Java (default v11)
 sudo apt install default-jdk
 
