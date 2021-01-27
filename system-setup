@@ -5,12 +5,6 @@ Usage: ./system-setup
 DETAILS
 
 echo -e "Starting system setup...\n"
-sudo add-apt-repository ppa:jonathonf/vim
-sudo apt update
-sudo apt-get update
-
-# Update vim version
-sudo apt install vim
 
 # Install pip3 for default python3 on Linux
 sudo apt install python3-pip
@@ -19,11 +13,52 @@ sudo apt install python3-pip
 pip3 install wakatime
 git clone https://github.com/gjsheep/bash-wakatime.git ~/.local/share/bash-wakatime
 
-# trash-cli (safer alternative to rm -rf)
-sudo apt install trash-cli
+##########
+# Vim
+##########
+
+sudo add-apt-repository ppa:jonathonf/vim
+sudo apt update
+sudo apt-get update
+
+# Update vim version
+sudo apt install vim
+
+# Vim plugins: install dependencies
+## 1. YouCompleteMe
+if [ -f ~/.vim/bundle/YouCompleteMe/install.py ]; then
+    sudo apt install build-essential cmake
+    python3 ~/.vim/bundle/YouCompleteMe/install.py --all
+fi
+## 2. vim-autoformat (default format programs) 
+sudo apt-get install python-autopep8 # Python
+sudo npm install -g remark-cli # Markdown
+sudo npm install -g fixjson # JSON
+sudo npm install -g js-beautify # HTML, CSS, JS 
+
+# linter used by ale (vim) for bash/sh; can also be used in terminal
+sudo apt install shellcheck
 
 # Silver Searcher
 sudo apt-get install silversearcher-ag
+
+##############
+# Programming
+##############
+
+# Java (default v11)
+sudo apt install default-jdk
+
+# LaTeX (uncomment if necessary)
+# sudo apt-get install texlive texlive-pictures texlive-latex-extra texlive-xetex
+# sudo apt install chktex # linter used by ale for vim
+
+###############
+# Misc./System
+###############
+
+# trash-cli (safer alternative to rm -rf)
+sudo apt install trash-cli
 
 # tdlr; (man, but with examples)
 sudo apt install tldr && tldr
@@ -40,26 +75,5 @@ wget https://github.com/sharkdp/bat/releases/download/v0.15.4/bat_0.15.4_amd64.d
 sudo dpkg -i bat_0.15.4_amd64.deb
 rm -rf bat_0.15.4_amd64.deb
 
-# Vim plugins: install dependencies
-## 1. YouCompleteMe
-if [ -f ~/.vim/bundle/YouCompleteMe/install.py ]; then
-    sudo apt install build-essential cmake
-    python3 ~/.vim/bundle/YouCompleteMe/install.py --all
-fi
-## 2. vim-autoformat (default format programs) 
-sudo apt-get install python-autopep8 # Python
-sudo npm install -g remark-cli # Markdown
-sudo npm install -g fixjson # JSON
-sudo npm install -g js-beautify # HTML, CSS, JS 
-
-# shellcheck, linter used by ale (vim) for bash/sh
-sudo apt install shellcheck
-
-# Java (default v11)
-sudo apt install default-jdk
-
-# LaTeX (uncomment if necessary)
-# sudo apt-get install texlive texlive-pictures texlive-latex-extra texlive-xetex
-# sudo apt install chktex # linter used by ale for vim
 
 echo -e "\nSystem setup complete!\n"
