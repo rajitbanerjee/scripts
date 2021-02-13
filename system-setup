@@ -57,6 +57,10 @@ sudo apt install default-jdk
 # Misc./System
 ###############
 
+# ZSH
+sudo apt install zsh
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
 # trash-cli (safer alternative to rm -rf)
 sudo apt install trash-cli
 
