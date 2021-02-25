@@ -6,12 +6,24 @@ DETAILS
 
 echo -e "Starting system setup...\n"
 
+##############
+# Programming
+##############
+
 # Install pip3 for default python3 on Linux
 sudo apt install python3-pip
 
 # Intall bash-wakatime
 pip3 install wakatime
 git clone https://github.com/gjsheep/bash-wakatime.git ~/.local/share/bash-wakatime
+
+# Java (default v11)
+sudo apt install default-jdk
+
+# LaTeX (uncomment if necessary)
+# sudo apt-get install texlive texlive-pictures texlive-latex-extra texlive-xetex
+# sudo apt install chktex # linter used by ale for vim
+
 
 ##########
 # Vim
@@ -42,16 +54,6 @@ sudo apt install shellcheck
 # Silver Searcher
 sudo apt-get install silversearcher-ag
 
-##############
-# Programming
-##############
-
-# Java (default v11)
-sudo apt install default-jdk
-
-# LaTeX (uncomment if necessary)
-# sudo apt-get install texlive texlive-pictures texlive-latex-extra texlive-xetex
-# sudo apt install chktex # linter used by ale for vim
 
 ###############
 # Misc./System
@@ -60,6 +62,7 @@ sudo apt install default-jdk
 # ZSH
 sudo apt install zsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+sudo apt install command-not-found
 
 # trash-cli (safer alternative to rm -rf)
 sudo apt install trash-cli
