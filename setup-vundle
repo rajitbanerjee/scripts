@@ -10,3 +10,21 @@ else
     echo "Vundle plugins installed!"
 fi
 
+## YouCompleteMe plugin setup
+PS3="Do you want to set up YouCompleteMe [y/n]? " 
+options=("y" "n")
+select opt in "${options[@]}"; do
+    case $opt in
+        "y")
+            if [ -f ~/.vim/bundle/YouCompleteMe/install.py ]; then
+                sudo apt install build-essential cmake
+                python3 ~/.vim/bundle/YouCompleteMe/install.py --all
+            fi
+        ;;
+        "n")
+            "Not reinstalling YCM."
+            break
+        ;;
+        *) echo "invalid option $REPLY";;
+    esac
+done
