@@ -18,10 +18,13 @@ pip3 install wakatime
 git clone https://github.com/gjsheep/bash-wakatime.git "$HOME"/.local/share/bash-wakatime
 
 # set up for ZSH wakatime
-git submodule add https://github.com/sobolevn/wakatime-zsh-plugin.git "$HOME"/.dotfiles/zsh/custom/plugins/wakatime
+cd "$HOME"/.dotfiles/zsh/custom/plugins/
+git submodule add https://github.com/sobolevn/wakatime-zsh-plugin.git
+git mv wakatime-zsh-plugin wakatime
+cd "$HOME"
 
 
-read -pr "Enter WakaTime API Key: " key
+read -p "Enter WakaTime API Key: " key
 echo -e """[settings]
 debug = false
 hidefilenames = false
