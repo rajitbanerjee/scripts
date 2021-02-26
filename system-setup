@@ -15,15 +15,14 @@ sudo apt install python3-pip
 
 # Intall bash-wakatime
 pip3 install wakatime
-git clone https://github.com/gjsheep/bash-wakatime.git $HOME/.local/share/bash-wakatime
+git clone https://github.com/gjsheep/bash-wakatime.git "$HOME"/.local/share/bash-wakatime
 
 # set up for ZSH wakatime
-git clone https://github.com/sobolevn/wakatime-zsh-plugin.git $HOME/.zsh/custom/plugins/wakatime
+git submodule add https://github.com/sobolevn/wakatime-zsh-plugin.git "$HOME"/.dotfiles/zsh/custom/plugins/wakatime
 
 
-read -p "Enter WakaTime API Key: " key
-echo -e """
-[settings]
+read -pr "Enter WakaTime API Key: " key
+echo -e """[settings]
 debug = false
 hidefilenames = false
 ignore =
@@ -32,7 +31,7 @@ ignore =
     MERGE_MSG$
     TAG_EDITMSG$
 api_key=$key
-""" > $HOME/.wakatime.cfg
+""" > "$HOME"/.wakatime.cfg
 
 # Java (default v11)
 sudo apt install default-jdk
@@ -76,7 +75,7 @@ sudo apt-get install silversearcher-ag
 sudo apt install zsh
 # oh my zsh will start a sub-shell, just "exit" and the this setup script will continue
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-mv $HOME/.zshrc.pre-oh-my-zsh $HOME/.zshrc
+mv "$HOME"/.zshrc.pre-oh-my-zsh "$HOME"/.zshrc
 sudo apt install command-not-found
 
 # trash-cli (safer alternative to rm -rf)
@@ -86,8 +85,8 @@ sudo apt install trash-cli
 sudo apt install tldr && tldr
 
 # https://github.com/chubin/cheat.sh
-curl https://cht.sh/:cht.sh > $HOME/.local/bin/cht.sh
-chmod +x $HOME/.local/bin/cht.sh
+curl https://cht.sh/:cht.sh > "$HOME"/.local/bin/cht.sh
+chmod +x "$HOME"/.local/bin/cht.sh
 
 # zip (in case tar.gz won't do)
 sudo apt install zip
