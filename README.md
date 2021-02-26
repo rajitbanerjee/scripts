@@ -24,7 +24,7 @@ This will allow you to run the scripts as shown:
 
     $ ./script_name
 
-Tip: Add the `scripts` directory to your `$PATH` by including the line below to your [shell configs](https://github.com/rajitbanerjee/dotfiles/blob/master/shell/external.sh) to access them from anywhere!
+Tip: Add the `scripts` directory to your `$PATH` by including the line below to your [shell configs](https://github.com/rajitbanerjee/dotfiles/blob/main/shell/external.sh) to access them from anywhere!
 
     $ export PATH="/path/to/scripts:$PATH"
 
