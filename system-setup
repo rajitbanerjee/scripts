@@ -54,9 +54,10 @@ sudo apt-get update
 # Update vim version
 sudo apt install vim
 
-# TODO: NeoVim
+# NeoVim
+sudo apt install neovim
 
-## vim-autoformat (default format programs) 
+# vim-autoformat (default format programs) 
 sudo apt-get install python-autopep8 # Python
 sudo npm install -g remark-cli # Markdown
 sudo npm install -g fixjson # JSON
