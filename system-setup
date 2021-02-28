@@ -38,6 +38,9 @@ api_key=$key
 # Java (default v11)
 sudo apt install default-jdk
 
+# Nodejs (for nvim plugins etc.)
+curl --fail -LSs https://install-node.now.sh/lts | sudo bash
+
 # LaTeX (uncomment if necessary)
 # sudo apt-get install texlive texlive-pictures texlive-latex-extra texlive-xetex
 # sudo apt install chktex # linter used by ale for vim
@@ -56,17 +59,18 @@ sudo apt install vim
 
 # NeoVim
 sudo apt install neovim
-# python3 provider for neovim
-python3 -m pip install --user --upgrade pynvim
 
-# vim-autoformat (default format programs) 
-sudo apt-get install python-autopep8 # Python
-sudo npm install -g remark-cli # Markdown
-sudo npm install -g fixjson # JSON
-sudo npm install -g js-beautify # HTML, CSS, JS 
+pip3 install --user --upgrade pynvim # python3 provider for neovim
 
-# linter used by ale (vim) for bash/sh; can also be used in terminal
-sudo apt install shellcheck
+# linting/formatting
+pip3 install isort # coc-pyright python import sorter
+pip3 install autopep8
+pip3 install flake8
+npm install -g prettier
+sudo apt install shellcheck # shell linter
+
+# HTML live server
+npm install -g live-server
 
 # Silver Searcher
 sudo apt-get install silversearcher-ag
