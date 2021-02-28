@@ -65,7 +65,7 @@ fi
 # Vim
 ##########
 
-echo -e "\n\nVim, NeoVim:\n"
+echo -e "\n\nVim:\n"
 sudo add-apt-repository ppa:jonathonf/vim
 sudo apt update
 
@@ -73,6 +73,7 @@ sudo apt update
 sudo apt install vim
 
 # NeoVim
+echo -e "\n\nNeoVim:\n"
 sudo add-apt-repository ppa:neovim-ppa/stable
 sudo apt update
 sudo apt install neovim
@@ -119,7 +120,7 @@ echo -e "\n\nTrash CLI:\n"
 sudo apt install trash-cli
 
 # tdlr; (man, but with examples)
-echo -e "\n\ntldr:\n"
+echo -e "\n\nTLDR:\n"
 sudo apt install tldr && tldr
 
 # https://github.com/chubin/cheat.sh
