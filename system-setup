@@ -12,19 +12,13 @@ echo -e "Starting system setup...\n"
 
 # Install pip3 for default python3 on Linux
 echo -e "\n\nPython3 and pip:\n"
+sudo apt update
 sudo apt install python3-pip
 
 # Intall bash-wakatime
 echo -e "\n\nWakaTime coding metrics:\n"
 pip3 install wakatime
 git clone https://github.com/gjsheep/bash-wakatime.git "$HOME"/.local/share/bash-wakatime
-
-# set up for ZSH wakatime
-echo -e "\n\nZSH WakaTime plugin:\n"
-cd "$HOME"/.dotfiles/zsh/custom/plugins/
-git submodule add https://github.com/sobolevn/wakatime-zsh-plugin.git
-git mv wakatime-zsh-plugin wakatime
-cd "$HOME"
 
 # Wakatime config file
 if [ ! -f "$HOME"/.wakatime.cfg ]; then
