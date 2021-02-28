@@ -1,12 +1,26 @@
 #!/bin/bash
 
 # Install coc.nvim extensions
-mkdir -p ~/.config/coc/extensions
-cd ~/.config/coc/extensions
+mkdir -p "$HOME"/.config/coc/extensions
+cd "$HOME"/.config/coc/extensions
 if [ ! -f package.json ]
 then
   echo '{"dependencies":{}}'> package.json
 fi
 
-npm install coc-spell-checker coc-snippets coc-html coc-highlight coc-explorer coc-vimlsp \
+npm install \
+      coc-spell-checker \
+      coc-snippets \
+      coc-explorer \
+      coc-vimlsp \
+      coc-highlight \
+      coc-pyright \
+      coc-go \
+      coc-html \
+      coc-css \
+      coc-tsserver \
+      coc-json \
+      coc-sql \
+      coc-metals \
+      coc-clangd \
 	--global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
