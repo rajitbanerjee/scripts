@@ -97,6 +97,10 @@ echo -e "\n\nFuzzy finder fzf:\n"
 git clone --depth 1 https://github.com/junegunn/fzf.git "$HOME"/.fzf
 "$HOME"/.fzf/install
 
+# Rigrep
+echo -e "\n\nRipgrep (rg):\n"
+sudo apt-get install ripgrep
+
 # Silver Searcher
 echo -e "\n\nSilver searcher Ag:\n"
 sudo apt-get install silversearcher-ag
