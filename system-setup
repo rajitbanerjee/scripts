@@ -117,7 +117,7 @@ sudo apt install command-not-found
 echo -e "\n\nTrash CLI:\n"
 sudo apt install trash-cli
 
-# tdlr; (man, but with examples)
+# tl;dr (man, but with examples)
 echo -e "\n\nTLDR:\n"
 sudo apt install tldr && tldr
 
