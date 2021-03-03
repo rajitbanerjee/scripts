@@ -21,6 +21,5 @@ npm install \
       coc-tsserver \
       coc-json \
       coc-sql \
-      coc-metals \
       coc-clangd \
 	--global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
