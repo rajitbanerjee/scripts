@@ -6,4 +6,12 @@ Usage:
 (Run at the root of the git repository.)
 DETAILS
 
-xdg-open "https://github.com/$(git config remote.origin.url | cut -f2 -d:)"
+remote="$(git config remote.origin.url)"
+if [ "$(cut -c-5 <<< $remote)" == "https" ]; then
+    # using https
+    repo="$(cut -d'/' -f4- <<< $remote)"
+else
+    # using ssh
+    repo="$(cut -d':' -f2 <<< $remote)"
+fi
+xdg-open "https://github.com/$repo"
