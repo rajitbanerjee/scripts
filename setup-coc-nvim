@@ -16,6 +16,7 @@ npm install \
       coc-highlight \
       coc-pyright \
       coc-go \
+      coc-java \
       coc-html \
       coc-css \
       coc-tsserver \
