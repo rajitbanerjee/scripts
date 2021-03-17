@@ -12,7 +12,7 @@ echo -e "Starting macOS system setup...\n"
 
 # Install wakatime
 echo -e "\n\nWakaTime coding metrics:\n"
-pip3 install wakatime
+pip3 install --user wakatime
 
 # Wakatime config file
 if [ ! -f "$HOME"/.wakatime.cfg ]; then
@@ -46,9 +46,9 @@ pip3 install --user --upgrade pynvim # python3 provider for neovim
 
 # linting/formatting
 echo -e "\n\nALE linters/fixers:\n"
-pip3 install isort # coc-pyright python import sorter
-pip3 install autopep8
-pip3 install flake8
+pip3 install --user isort # coc-pyright python import sorter
+pip3 install --user autopep8
+pip3 install --user flake8
 npm install -g prettier
 brew install shellcheck # shell linter
 
