@@ -33,6 +33,7 @@ fi
 # Nodejs (for nvim plugins etc.)
 echo -e "\n\nNode.js LTS:\n"
 curl --fail -LSs https://install-node.now.sh/lts | sudo bash
+npm config set prefix '~/.local'
 
 # Allow brew to install packages to /usr/local/
 sudo chown -R $(whoami) $(brew --prefix)/*
@@ -62,6 +63,10 @@ npm install -g live-server
 ###############
 # Misc./System
 ###############
+
+# wget
+echo -e "\n\nwget:\n"
+brew install wget
 
 # fzf fuzzy finder
 echo -e "\n\nFuzzy finder fzf:\n"
