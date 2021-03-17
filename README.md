@@ -60,6 +60,7 @@ Please refer to the individual scripts for detailed usage information.
 | ./setup-vundle      | Install Vundle and other vim plugins (or update them).                        |
 | ./sort-json         | Sort a JSON file (lexicographically) in-place (including any nested objects). |
 | ./system-setup      | Install system dependencies (+ vim plugins' dependencies) on a fresh system.  |
+| ./system-setup      | Setup macOS.                                                                  |
 | ./update-submodule  | Update changes in a given submodule.                                          |
 | ./youtube           | Download a YouTube video (mp4) or audio file (mp3).                           |
 

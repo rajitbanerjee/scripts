@@ -1,0 +1,96 @@
+#!/bin/bash
+<<DETAILS
+Set up a new macOS system with my preferred packages.
+Usage: ./system-setup
+DETAILS
+
+echo -e "Starting macOS system setup...\n"
+
+##############
+# Programming
+##############
+
+# Install wakatime
+echo -e "\n\nWakaTime coding metrics:\n"
+pip3 install wakatime
+
+# Wakatime config file
+if [ ! -f "$HOME"/.wakatime.cfg ]; then
+    echo -e "\n\nWakaTime config file setup:\n"
+    read -p "Enter WakaTime API Key: " key
+    echo -e """[settings]
+debug = false
+hidefilenames = false
+ignore =
+    COMMIT_EDITMSG$
+    PULLREQ_EDITMSG$
+    MERGE_MSG$
+    TAG_EDITMSG$
+api_key=$key
+""" > "$HOME"/.wakatime.cfg
+fi
+
+# Nodejs (for nvim plugins etc.)
+echo -e "\n\nNode.js LTS:\n"
+curl --fail -LSs https://install-node.now.sh/lts | sudo bash
+
+##########
+# Vim
+##########
+
+echo -e "\n\nNeoVim:\n"
+brew install neovim
+
+echo -e "\n\nPython3 provider for nvim:\n"
+pip3 install --user --upgrade pynvim # python3 provider for neovim
+
+# linting/formatting
+echo -e "\n\nALE linters/fixers:\n"
+pip3 install isort # coc-pyright python import sorter
+pip3 install autopep8
+pip3 install flake8
+npm install -g prettier
+brew install shellcheck # shell linter
+
+# HTML live server
+echo -e "\n\nHTML live server:\n"
+npm install -g live-server
+
+###############
+# Misc./System
+###############
+
+# fzf fuzzy finder
+echo -e "\n\nFuzzy finder fzf:\n"
+git clone --depth 1 https://github.com/junegunn/fzf.git "$HOME"/.fzf
+"$HOME"/.fzf/install
+
+# Rigrep
+echo -e "\n\nRipgrep (rg):\n"
+brew install ripgrep
+
+# ZSH
+echo -e "\n\noh-my-zsh:\n(Note: \"exit\" from oh-my-zsh to resume setup)\n"
+# oh my zsh will start a sub-shell, just "exit" and the this setup script will continue
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+mv "$HOME"/.zshrc.pre-oh-my-zsh "$HOME"/.zshrc
+
+# trash-cli (safer alternative to rm -rf)
+echo -e "\n\nTrash CLI:\n"
+brew install trash-cli
+
+# tl;dr (man, but with examples)
+echo -e "\n\nTLDR:\n"
+brew install tldr
+
+# https://github.com/chubin/cheat.sh
+echo -e "\n\nCheat sheat:\n"
+curl https://cht.sh/:cht.sh > "$HOME"/.local/bin/cht.sh
+chmod +x "$HOME"/.local/bin/cht.sh
+
+# bat (a cat clone, with syntax highlighting)
+echo -e "\n\nBat:\n"
+brew install bat
+
+
+echo -e "\nSystem setup complete!\n"
