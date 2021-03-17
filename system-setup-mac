@@ -46,7 +46,7 @@ echo -e "\n\nNeoVim:\n"
 brew install neovim
 
 echo -e "\n\nPython3 provider for nvim:\n"
-pip3 install --user --upgrade pynvim # python3 provider for neovim
+python3 -m pip install --user --upgrade pynvim # python3 provider for neovim
 
 # linting/formatting
 echo -e "\n\nALE linters/fixers:\n"
@@ -67,6 +67,11 @@ npm install -g live-server
 # wget
 echo -e "\n\nwget:\n"
 brew install wget
+ 
+# tmux
+echo -e "\n\ntmux:\n"
+brew install tmux
+
 
 # fzf fuzzy finder
 echo -e "\n\nFuzzy finder fzf:\n"
