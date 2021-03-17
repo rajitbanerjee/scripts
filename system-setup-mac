@@ -34,6 +34,9 @@ fi
 echo -e "\n\nNode.js LTS:\n"
 curl --fail -LSs https://install-node.now.sh/lts | sudo bash
 
+# Allow brew to install packages to /usr/local/
+sudo chown -R $(whoami) $(brew --prefix)/*
+
 ##########
 # Vim
 ##########
