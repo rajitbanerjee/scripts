@@ -3,5 +3,9 @@
 # The usual "echo $PATH" is messy.
 # Usage: ./path
 
-source ~/.bashrc
+if [[ "$SHELL" == "/bin/zsh" ]]; then
+    source ~/.zshrc
+else
+    source ~/.bashrc
+fi
 tr ':' '\n' <<< \"$PATH\" | less
