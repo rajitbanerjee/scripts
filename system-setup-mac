@@ -38,6 +38,11 @@ npm config set prefix '~/.local'
 # Allow brew to install packages to /usr/local/
 sudo chown -R $(whoami) $(brew --prefix)/*
 
+# JDK 8 and Apache Maven
+echo -e "\n\nJava and Maven:\n"
+brew install openjdk@8
+brew install maven
+
 ##########
 # Vim
 ##########
