@@ -14,4 +14,8 @@ else
     # using ssh
     repo="$(cut -d':' -f2 <<< $remote)"
 fi
-xdg-open "https://github.com/$repo"
+if [[ "$(uname -s)" == "Linux" ]]; then
+    xdg-open "https://github.com/$repo"
+else
+    open "https://github.com/$repo"
+fi
