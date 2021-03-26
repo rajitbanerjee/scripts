@@ -15,7 +15,7 @@ echo -e "\n\nWakaTime coding metrics:\n"
 pip3 install --user wakatime
 
 # Wakatime config file
-if [ ! -f "$HOME"/.wakatime.cfg ]; then
+if [ ! -f ~/.wakatime.cfg ]; then
     echo -e "\n\nWakaTime config file setup:\n"
     read -p "Enter WakaTime API Key: " key
     echo -e """[settings]
@@ -27,7 +27,7 @@ ignore =
     MERGE_MSG$
     TAG_EDITMSG$
 api_key=$key
-""" > "$HOME"/.wakatime.cfg
+""" > ~/.wakatime.cfg
 fi
 
 # Nodejs (for nvim plugins etc.)
@@ -80,8 +80,8 @@ brew install tmux
 
 # fzf fuzzy finder
 echo -e "\n\nFuzzy finder fzf:\n"
-git clone --depth 1 https://github.com/junegunn/fzf.git "$HOME"/.fzf
-"$HOME"/.fzf/install
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
 
 # Rigrep
 echo -e "\n\nRipgrep (rg):\n"
@@ -91,7 +91,7 @@ brew install ripgrep
 echo -e "\n\noh-my-zsh:\n(Note: \"exit\" from oh-my-zsh to resume setup)\n"
 # oh my zsh will start a sub-shell, just "exit" and the this setup script will continue
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-mv "$HOME"/.zshrc.pre-oh-my-zsh "$HOME"/.zshrc
+mv ~/.zshrc.pre-oh-my-zsh ~/.zshrc
 brew tap homebrew/command-not-found
 
 # trash-cli (safer alternative to rm -rf)
@@ -104,8 +104,8 @@ brew install tldr
 
 # https://github.com/chubin/cheat.sh
 echo -e "\n\nCheat sheat:\n"
-curl https://cht.sh/:cht.sh > "$HOME"/.local/bin/cht.sh
-chmod +x "$HOME"/.local/bin/cht.sh
+curl https://cht.sh/:cht.sh > ~/.local/bin/cht.sh
+chmod +x ~/.local/bin/cht.sh
 
 # bat (a cat clone, with syntax highlighting)
 echo -e "\n\nBat:\n"

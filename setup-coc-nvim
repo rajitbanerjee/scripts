@@ -1,8 +1,9 @@
 #!/bin/bash
 
 # Install coc.nvim extensions
-mkdir -p "$HOME"/.config/coc/extensions
-cd "$HOME"/.config/coc/extensions
+extpath=~/.config/coc/extensions
+mkdir -p "$extpath"
+cd "$extpath" || return
 if [ ! -f package.json ]
 then
   echo '{"dependencies":{}}'> package.json
