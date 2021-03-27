@@ -47,7 +47,7 @@ brew install maven
 # Vim
 ##########
 
-echo -e "\n\nNeoVim:\n"
+echo -e "\n\nNeovim:\n"
 brew install neovim
 
 echo -e "\n\nPython3 provider for nvim:\n"

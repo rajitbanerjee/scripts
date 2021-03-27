@@ -66,8 +66,8 @@ sudo apt update
 # Update vim version
 sudo apt install vim
 
-# NeoVim
-echo -e "\n\nNeoVim:\n"
+# Neovim
+echo -e "\n\nNeovim:\n"
 sudo add-apt-repository ppa:neovim-ppa/stable
 sudo apt update
 sudo apt install neovim
