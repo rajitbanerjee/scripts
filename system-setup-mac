@@ -35,6 +35,11 @@ echo -e "\n\nNode.js LTS:\n"
 curl --fail -LSs https://install-node.now.sh/lts | sudo bash
 npm config set prefix '~/.local'
 
+# TypeScipt
+echo -e "\n\nTypeScript:\n"
+npm install -g typescript
+npm install -g ts-node
+
 # Allow brew to install packages to /usr/local/
 sudo chown -R $(whoami) $(brew --prefix)/*
 

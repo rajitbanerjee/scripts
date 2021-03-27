@@ -44,6 +44,11 @@ sudo apt install default-jdk
 echo -e "\n\nNode.js LTS:\n"
 curl --fail -LSs https://install-node.now.sh/lts | sudo bash
 
+# TypeScipt
+echo -e "\n\nTypeScript:\n"
+npm install -g typescript
+npm install -g ts-node
+
 # LaTeX
 read -rep $'\n\nInstall LaTeX? [y/n] ' latex
 if [ "$latex" == 'y' ] || [ "$latex" == 'yes' ]; then
