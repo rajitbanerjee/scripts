@@ -1,0 +1,12 @@
+#!/bin/bash
+<<DETAILS
+Use IntelliJ's code formatter to format Java source code. (macOS only)
+
+Usage:
+    $ java-format Hello.java
+DETAILS
+
+echo "Formatting $1..."
+# redirect both stdout and stderr from format.sh to black hole
+/Applications/IntelliJ\ IDEA.app/Contents/bin/format.sh "$1" >> /dev/null 2>&1
+echo -e "Done!\n"
