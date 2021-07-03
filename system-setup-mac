@@ -30,6 +30,10 @@ api_key=$key
 """ > ~/.wakatime.cfg
 fi
 
+# Alacritty (terminal)
+echo -e "\n\nAlacritty:\n"
+brew install --cask alacritty
+
 # Nodejs (for nvim plugins etc.)
 echo -e "\n\nNode.js LTS:\n"
 curl --fail -LSs https://install-node.now.sh/lts | sudo bash
@@ -37,8 +41,7 @@ npm config set prefix '~/.local'
 
 # TypeScipt
 echo -e "\n\nTypeScript:\n"
-npm install -g typescript
-npm install -g ts-node
+npm install -g typescript ts-node
 
 # Allow brew to install packages to /usr/local/
 sudo chown -R $(whoami) $(brew --prefix)/*
@@ -49,7 +52,7 @@ brew install openjdk@8
 brew install maven
 
 ##########
-# Vim
+# Neovim
 ##########
 
 echo -e "\n\nNeovim:\n"
@@ -82,7 +85,6 @@ brew install wget
 echo -e "\n\ntmux:\n"
 brew install tmux
 
-
 # fzf fuzzy finder
 echo -e "\n\nFuzzy finder fzf:\n"
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
@@ -91,6 +93,15 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 # Rigrep
 echo -e "\n\nRipgrep (rg):\n"
 brew install ripgrep
+
+# Watchman
+read -rep $'\n\nWatchman [y/n]: ' opt_watchman
+if [ "$opt_watchman" == 'y' ]; then
+    echo -e "\nInstalling..."
+    brew install watchman
+else
+    echo -e "Skipping...\n"
+fi
 
 # ZSH
 echo -e "\n\noh-my-zsh:\n(Note: \"exit\" from oh-my-zsh to resume setup)\n"

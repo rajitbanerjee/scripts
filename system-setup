@@ -50,28 +50,20 @@ npm install -g typescript
 npm install -g ts-node
 
 # LaTeX
-read -rep $'\n\nInstall LaTeX? [y/n] ' latex
-if [ "$latex" == 'y' ] || [ "$latex" == 'yes' ]; then
+read -rep $'\n\nLaTeX [y/n]: ' opt_latex
+if [ "$opt_latex" == 'y' ]; then
     echo -e "\nInstalling..."
     sudo apt-get install texlive texlive-pictures texlive-latex-extra texlive-xetex
     sudo apt install chktex # linter used by ale for vim
 else
-    echo -e "Not installing LaTeX.\n"
+    echo -e "Skipping...\n"
 fi
 
 
 ##########
-# Vim
+# Neovim
 ##########
 
-echo -e "\n\nVim:\n"
-sudo add-apt-repository ppa:jonathonf/vim
-sudo apt update
-
-# Update vim version
-sudo apt install vim
-
-# Neovim
 echo -e "\n\nNeovim:\n"
 sudo add-apt-repository ppa:neovim-ppa/stable
 sudo apt update
