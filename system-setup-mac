@@ -30,10 +30,6 @@ api_key=$key
 """ > ~/.wakatime.cfg
 fi
 
-# Alacritty (terminal)
-echo -e "\n\nAlacritty:\n"
-brew install --cask alacritty
-
 # Nodejs (for nvim plugins etc.)
 echo -e "\n\nNode.js LTS:\n"
 curl --fail -LSs https://install-node.now.sh/lts | sudo bash
