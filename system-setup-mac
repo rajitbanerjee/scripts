@@ -10,6 +10,9 @@ echo -e "Starting macOS system setup...\n"
 # Programming
 ##############
 
+brew update
+brew upgrade
+
 # Wakatime
 echo -e "\n\nWakaTime coding metrics:\n"
 pip3 install --user wakatime
