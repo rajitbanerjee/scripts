@@ -57,7 +57,6 @@ Please refer to the individual scripts for detailed usage information.
 | ./rename-files      | Rename files to replace spaces with underscores, and change to lower case.    |
 | ./run-py-java       | Run all python/java files in a specified directory.                           |
 | ./setup-coc-nvim    | Install coc.nvim extensions                                                   |
-| ./setup-vundle      | Install Vundle and other vim plugins (or update them).                        |
 | ./sort-json         | Sort a JSON file (lexicographically) in-place (including any nested objects). |
 | ./system-setup      | Install system dependencies (+ vim plugins' dependencies) on a fresh system.  |
 | ./system-setup-mac  | Setup macOS.                                                                  |
