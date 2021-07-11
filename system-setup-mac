@@ -15,7 +15,7 @@ brew upgrade
 
 # Wakatime
 echo -e "\n\nWakaTime coding metrics:\n"
-pip3 install --user wakatime
+python3 -m pip install --user wakatime
 
 if [ ! -f ~/.wakatime.cfg ]; then
     echo -e "\n\nWakaTime config file setup:\n"
@@ -63,9 +63,9 @@ python3 -m pip install --user --upgrade pynvim # python3 provider for neovim
 
 # linting/formatting
 echo -e "\n\nALE linters/fixers:\n"
-pip3 install --user isort # coc-pyright python import sorter
-pip3 install --user autopep8
-pip3 install --user flake8
+python3 -m pip install --user isort # coc-pyright python import sorter
+python3 -m pip install --user autopep8
+python3 -m pip install --user flake8
 npm install -g prettier
 brew install shellcheck # shell linter
 
