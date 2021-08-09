@@ -2,10 +2,16 @@
 # Format LaTeX file, then convert it to PDF, and clean up auxiliary files.
 
 # format
-~/.local/bin/latexindent/latexindent.pl $1 > ./.tmp.tex
+tempfile="./.tmp.tex"
+if [[ "$(uname -s)" == "Darwin" ]]; then
+    /usr/local/Cellar/latexindent/3.11/bin/latexindent $1 > $tempfile
+else
+    ~/.local/bin/latexindent/latexindent.pl $1 > $tempfile
+fi
+
 rm -rf $1
-mv ./.tmp.tex $1
-rm -rf ./.tmp.tex indent.log
+mv $tempfile $1
+rm -rf $tempfile indent.log
 
 # convert to PDF
 pdflatex $1
