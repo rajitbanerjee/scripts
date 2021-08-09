@@ -51,8 +51,16 @@ brew install maven
 # openjdk@8 is also a keg-only; we need to create a symbolic link so that the macOS java wrapper can find it
 sudo ln -sfn /usr/local/opt/openjdk@8/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk-8.jdk  
 
-# LaTeX formatter
-brew install latexindent
+# LaTeX
+read -rep $'\n\nLaTeX [y/n]: ' opt_latex
+if [ "$opt_latex" == 'y' ]; then
+    echo -e "\nInstalling..."
+    brew install --cask mactex
+    brew install pandoc
+    brew install latexindent
+else
+    echo -e "Skipping...\n"
+fi
 
 ##########
 # Neovim
