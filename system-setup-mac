@@ -142,5 +142,9 @@ chmod +x ~/.local/bin/cht.sh
 echo -e "\n\nBat:\n"
 brew install bat
 
+# git-pull-all
+echo -e "\n\ngit-pull-all:\n"
+npm i -g git-pull-all
+
 
 echo -e "\nSystem setup complete!\n"
