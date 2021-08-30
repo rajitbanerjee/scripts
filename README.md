@@ -46,7 +46,7 @@ Please refer to the individual scripts for detailed usage information.
 | ./github            | Open GitHub for repository in current working directory.                      |
 | ./google            | Google search in the command line.                                            |
 | ./hamming           | 11-bit Hamming Code problem solver.                                           |
-| ./install-conda     | `source ./install-conda` installs Miniconda3.                                 |
+| ./install-conda     | Installs Miniconda3 on macOS or Linux.                                        |
 | ./lx                | Format LaTeX file, convert to PDF and trash auxiliary files.                  |
 | ./merge-json        | Merge all JSON files in the specified directory.                              |
 | ./merge-pdf         | Merge mutliple PDF files into a single file.                                  |

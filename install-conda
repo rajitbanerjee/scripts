@@ -1,13 +1,10 @@
 #!/bin/bash
-# Install latest Miniconda3 on your Linux machine
+# Install latest Miniconda3 on your machine
 # Usage: source ./install-conda
 
 rm -rf ~/.local/share/conda
-wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda.sh
+[[ "$(uname -s)" == "Darwin" ]] && os="MacOSX" || os="Linux"
+wget "https://repo.anaconda.com/miniconda/Miniconda3-latest-$os-x86_64.sh" -O ~/miniconda.sh
 chmod +x ~/miniconda.sh
 ~/miniconda.sh -b -p  ~/.local/share/conda
 rm -rf ~/miniconda.sh
-eval "$(~/.local/share/conda/bin/conda shell.bash hook)"
-conda init
-source ~/.bashrc
-echo -e "Conda initialised! No need to reopen shell.\n"
