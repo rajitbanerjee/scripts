@@ -44,12 +44,14 @@ npm install -g typescript ts-node
 # Allow brew to install packages to /usr/local/
 sudo chown -R $(whoami) $(brew --prefix)/*
 
-# JDK 8 and Apache Maven
+# JDK 8, 11 and Apache Maven
 echo -e "\n\nJava and Maven:\n"
 brew install openjdk@8
+brew install openjdk@11
 brew install maven
-# openjdk@8 is also a keg-only; we need to create a symbolic link so that the macOS java wrapper can find it
-sudo ln -sfn /usr/local/opt/openjdk@8/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk-8.jdk  
+# openjdk@8 and @11 are keg-only; we need to create symbolic links so that the macOS java wrapper can find it
+sudo ln -sfn $(brew --prefix)/opt/openjdk@8/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk-8.jdk  
+sudo ln -sfn $(brew --prefix)/opt/openjdk@11/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk-11.jdk
 
 # LaTeX
 read -rep $'\n\nLaTeX [y/n]: ' opt_latex
