@@ -72,15 +72,18 @@ echo -e "\n\nNeovim:\n"
 brew install neovim
 
 echo -e "\n\nPython3 provider for nvim:\n"
-python3 -m pip install --user --upgrade pynvim # python3 provider for neovim
+python3 -m pip install --user --upgrade pynvim
 
 # linting/formatting
 echo -e "\n\nALE linters/fixers:\n"
-python3 -m pip install --user isort # coc-pyright python import sorter
+## python
+python3 -m pip install --user isort
 python3 -m pip install --user autopep8
 python3 -m pip install --user flake8
+## html, css, js, md, etc.
 npm install -g prettier
-brew install shellcheck # shell linter
+## shell
+brew install shellcheck
 
 # HTML live server
 echo -e "\n\nHTML live server:\n"
