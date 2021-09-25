@@ -84,6 +84,9 @@ python3 -m pip install --user flake8
 npm install -g prettier
 ## shell
 brew install shellcheck
+## java
+java_format="google-java-format-1.11.0-all-deps.jar"
+wget https://github.com/google/google-java-format/releases/download/v1.11.0/"$java_format" -O ~/.local/lib/"$java_format" --no-check-certificate
 
 # HTML live server
 echo -e "\n\nHTML live server:\n"
