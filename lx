@@ -17,5 +17,5 @@ rm -rf $tempfile indent.log
 pdflatex $1
 
 # clean up auxiliary files
-trash ${1%.*}.{aux,fdb_latexmk,fls,log,out,synctex.gz}
+trash ${1%.*}.{aux,log,out}
 
