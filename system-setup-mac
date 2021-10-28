@@ -150,6 +150,10 @@ chmod +x ~/.local/bin/cht.sh
 echo -e "\n\nBat:\n"
 brew install bat
 
+# dpkg
+echo -e "\n\ndpkg:\n"
+brew install dpkg
+
 # git-pull-all
 echo -e "\n\ngit-pull-all:\n"
 npm i -g git-pull-all
