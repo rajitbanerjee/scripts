@@ -6,18 +6,19 @@ DETAILS
 
 echo -e "Starting system setup...\n"
 
+
 ##############
 # Programming
 ##############
 
-# Install pip3 for default python3 on Linux
+# Install python3 -m pip for default python3 on Linux
 echo -e "\n\nPython3 and pip:\n"
 sudo apt update
 sudo apt install python3-pip
 
 # Intall bash-wakatime
 echo -e "\n\nWakaTime coding metrics:\n"
-pip3 install wakatime
+python3 -m pip install --user wakatime
 git clone https://github.com/gjsheep/bash-wakatime.git ~/.local/share/bash-wakatime
 
 # Wakatime config file
@@ -36,18 +37,22 @@ api_key=$key
 """ > ~/.wakatime.cfg
 fi
 
+# Node.js
+echo -e "\n\nNode.js LTS:\n"
+curl --fail -LSs https://install-node.now.sh/lts | sudo bash
+npm config set prefix '~/.local'
+
+# TypeScript
+echo -e "\n\nTypeScript:\n"
+npm i -g typescript ts-node @types/node
+npm i -g lodash @types/lodash 
+## ts-node speedup using swc - Rust based transpiler
+## https://typestrong.org/ts-node/docs/transpilers/#bundled-swc-integration
+npm i -g @swc/core @swc/helpers regenerator-runtime
+
 # Java (default v11)
 echo -e "\n\nDefault JDK installation:\n"
 sudo apt install default-jdk
-
-# Nodejs (for nvim plugins etc.)
-echo -e "\n\nNode.js LTS:\n"
-curl --fail -LSs https://install-node.now.sh/lts | sudo bash
-
-# TypeScipt
-echo -e "\n\nTypeScript:\n"
-npm install -g typescript
-npm install -g ts-node
 
 # LaTeX
 read -rep $'\n\nLaTeX [y/n]: ' opt_latex
@@ -70,19 +75,25 @@ sudo apt update
 sudo apt install neovim
 
 echo -e "\n\nPython3 provider for nvim:\n"
-pip3 install --user --upgrade pynvim # python3 provider for neovim
+python3 -m pip install --user --upgrade pynvim 
 
 # linting/formatting
 echo -e "\n\nALE linters/fixers:\n"
-pip3 install isort # coc-pyright python import sorter
-pip3 install autopep8
-pip3 install flake8
-npm install -g prettier
-sudo apt install shellcheck # shell linter
+## python
+python3 -m pip install --user isort
+python3 -m pip install --user autopep8
+python3 -m pip install --user flake8
+## html, css, js, md, etc.
+npm i -g prettier @prettier/plugin-xml
+## shell
+sudo apt install shellcheck
+## java
+java_format="google-java-format-1.11.0-all-deps.jar"
+wget https://github.com/google/google-java-format/releases/download/v1.11.0/"$java_format" -O ~/.local/lib/"$java_format"
 
 # HTML live server
 echo -e "\n\nHTML live server:\n"
-npm install -g live-server
+npm i -g live-server
 
 
 ###############
@@ -98,12 +109,8 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 echo -e "\n\nRipgrep (rg):\n"
 sudo apt-get install ripgrep
 
-# Silver Searcher
-echo -e "\n\nSilver searcher Ag:\n"
-sudo apt-get install silversearcher-ag
-
-# ZSH
-echo -e "\n\nZSH, oh-my-zsh:\n(Note: \"exit\" from oh-my-zsh to resume setup)\n"
+# zsh
+echo -e "\n\nzsh, oh-my-zsh:\n(Note: \"exit\" from oh-my-zsh to resume setup)\n"
 sudo apt install zsh
 # oh my zsh will start a sub-shell, just "exit" and the this setup script will continue
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -132,6 +139,10 @@ echo -e "\n\nBat:\n"
 wget https://github.com/sharkdp/bat/releases/download/v0.15.4/bat_0.15.4_amd64.deb
 sudo dpkg -i bat_0.15.4_amd64.deb
 rm -rf bat_0.15.4_amd64.deb
+
+# git-pull-all
+echo -e "\n\ngit-pull-all:\n"
+npm i -g git-pull-all
 
 
 echo -e "\nSystem setup complete!\n"
