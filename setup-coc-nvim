@@ -16,6 +16,7 @@ npm install \
       coc-vimlsp \
       coc-highlight \
       coc-java \
+      coc-jedi \
       coc-html \
       coc-css \
       coc-tsserver \
