@@ -45,7 +45,7 @@ try:
 
             # save merged PDF
             merger.write(open("merged.pdf", 'wb'))
-            print(f"\nPDF merge complete! Saved as: merged.pdf\n")
+            print("\nPDF merge complete! Saved as: merged.pdf\n")
 
 except Exception as e:
     print(f"\nError: File could not be processed!\n{filename}")

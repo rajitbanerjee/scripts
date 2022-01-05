@@ -16,5 +16,5 @@ if [[ $* == "" ]]; then
     exit 1
 fi
 
-mkdir -p $(dirname $1)
-touch $1
+mkdir -p "$(dirname "$1")"
+touch "$1"

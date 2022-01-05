@@ -13,8 +13,8 @@ npm install \
       coc-spell-checker \
       coc-snippets \
       coc-explorer \
-      coc-vimlsp \
       coc-highlight \
+      coc-vimlsp \
       coc-java \
       coc-jedi \
       coc-html \
@@ -27,7 +27,7 @@ npm install \
 
 # https://github.com/neoclide/coc-java/issues/99#issuecomment-663856695
 coc_java_data="$extpath/coc-java-data/server"
-rm -rf "$coc_java_data/*"
+rm -rf "${coc_java_data:?}/*"
 jdt_ls="jdt-language-server-0.57.0-202006172108.tar.gz"
 wget https://download.eclipse.org/jdtls/milestones/0.57.0/$jdt_ls
 tar -xf "$jdt_ls" -C  "$coc_java_data"

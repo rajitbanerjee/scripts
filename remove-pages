@@ -10,7 +10,7 @@ Removes specified pages from a given PDF file.
 ### Usage
 
 1. Ensure that you have `pip` installed.
-2. Run the script with the PDF file to be processed and the page numbers 
+2. Run the script with the PDF file to be processed and the page numbers
 to be removed (comma separated, no spaces).
 ```
 $ ./remove-pages doc.pdf 1,2,3
@@ -42,10 +42,10 @@ try:
 
         # save modified PDF
         writer.write(open("new_doc.pdf", 'wb'))
-        print(f"\nPage removal complete! Saved as: new_doc.pdf")
+        print("\nPage removal complete! Saved as: new_doc.pdf")
     else:
         print_help()
 
 except Exception as e:
-    print(f"\nError: File could not be processed!")
+    print("\nError: File could not be processed!")
     print(e)
